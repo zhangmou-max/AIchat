@@ -62,8 +62,7 @@ void MainWindow::onReplyFinished(QNetworkReply *reply)
 
         // 解析 JSON 响应
         QJsonDocument jsonResponse = QJsonDocument::fromJson(responseContent);
-        if (jsonResponse.isNull()) {
-            ui->textEditChat->append("Error: Invalid JSON response");
+        if (jsonResponse.isNull()) { 
             return;
         }
 
